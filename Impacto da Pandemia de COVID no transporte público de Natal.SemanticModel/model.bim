@@ -8,7 +8,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Total\",\"Medidas\",\"2019\",\"2020\",\"2021\"]"
+        "value": "[\"Total\",\"Medidas\",\"2019\",\"2020\",\"2021\",\"2022\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -69,6 +69,14 @@
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
         "toTable": "LocalDateTable_0c2f8cc7-f295-4e54-a9ef-06e1dbabf3da"
+      },
+      {
+        "name": "ca863d81-0790-4d21-968d-88d0068cb99a",
+        "fromColumn": "Mes",
+        "fromTable": "2022",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_b860adaa-a6e5-4025-84dd-30cb20e99d6e"
       }
     ],
     "sourceQueryCulture": "pt-BR",
@@ -79,10 +87,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navegação"
           }
         ],
         "columns": [
@@ -305,7 +309,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Fonte = Csv.Document(File.Contents(\"C:\\Users\\Aan\\Documents\\power Bi\\projeto onibus\\01-dados-be-2021-analitico.csv\"),[Delimiter=\",\", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Users\\Aan\\Documents\\power Bi\\Linhas de Onibus Natal\\01-dados-be-2021-analitico.csv\"),[Delimiter=\",\", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
                 "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Mês\", Int64.Type}, {\"Empresa\", type text}, {\"Linha\", type text}, {\"Estudante_Cartao\", Int64.Type}, {\"Estudante_BT\", Int64.Type}, {\"Vale_Transporte\", Int64.Type}, {\"Integracao_Plena\", Int64.Type}, {\"Integracao_Complementar\", Int64.Type}, {\"Gratuito_Cartao\", Int64.Type}, {\"Gratuito_BT\", Int64.Type}, {\"Inteira_Cartao\", Int64.Type}, {\"Inteira_Especie\", Int64.Type}, {\"Tarifa_Social\", Int64.Type}, {\"Qtd_Viagens\", Int64.Type}}),",
                 "    #\"Personalização Adicionada\" = Table.AddColumn(#\"Tipo Alterado\", \"Total\", each ([Estudante_Cartao]+[Estudante_BT]+[Vale_Transporte]+[Integracao_Plena]+[Integracao_Complementar]+[Gratuito_Cartao]+[Gratuito_BT]+[Inteira_Cartao]+[Inteira_Especie]+[Tarifa_Social])),",
@@ -920,10 +924,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navegação"
           }
         ],
         "columns": [
@@ -1146,7 +1146,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Fonte = Csv.Document(File.Contents(\"C:\\Users\\Aan\\Documents\\power Bi\\projeto onibus\\01-dados-be-2020-analitico.csv\"),[Delimiter=\";\", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Users\\Aan\\Documents\\power Bi\\Linhas de Onibus Natal\\01-dados-be-2020-analitico.csv\"),[Delimiter=\";\", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
                 "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Mes\", type text}, {\"Empresa\", type text}, {\"Linha\", Int64.Type}, {\"Estudante_Cartao\", Int64.Type}, {\"Estudante_BT\", Int64.Type}, {\"Vale_Transporte\", Int64.Type}, {\"Integracao_Plena\", Int64.Type}, {\"Integracao_Complementar\", Int64.Type}, {\"Gratuito_Cartao\", Int64.Type}, {\"Gratuito_BT\", Int64.Type}, {\"Inteira_Cartao\", Int64.Type}, {\"Inteira_Especie\", Int64.Type}, {\"Tarifa_Social\", Int64.Type}, {\"Qtd_Viagens\", Int64.Type}}),",
                 "    #\"Sufixo Adicionado\" = Table.TransformColumns(#\"Tipo Alterado\", {{\"Mes\", each _ & \"/2020\", type text}}),",
@@ -1599,7 +1599,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Fonte = Csv.Document(File.Contents(\"C:\\Users\\Aan\\Documents\\power Bi\\projeto onibus\\01-dados-be-2019-analitico.csv\"),[Delimiter=\";\", Columns=14, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Users\\Aan\\Documents\\power Bi\\Linhas de Onibus Natal\\01-dados-be-2019-analitico.csv\"),[Delimiter=\";\", Columns=14, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
                 "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Mês\", type text}, {\"Empresa\", type text}, {\"Linha\", Int64.Type}, {\"Estudante_Cartao\", Int64.Type}, {\"Estudante_BT\", Int64.Type}, {\"Vale_Transporte\", Int64.Type}, {\"Integracao_Plena\", Int64.Type}, {\"Integracao_Complementar\", Int64.Type}, {\"Gratuito_Cartao\", Int64.Type}, {\"Gratuito_BT\", Int64.Type}, {\"Inteira_Cartao\", Int64.Type}, {\"Inteira_Especie\", Int64.Type}, {\"Tarifa_Social\", Int64.Type}, {\"Qtd_Viagens\", Int64.Type}}),",
                 "    #\"Sufixo Adicionado\" = Table.TransformColumns(#\"Tipo Alterado\", {{\"Mês\", each _ & \"/2019\", type text}}),",
@@ -1883,11 +1883,10 @@
                 "value": "Automatic"
               }
             ],
-            "dataType": "int64",
-            "formatString": "0",
+            "dataType": "string",
             "lineageTag": "33e6367d-294f-4fa4-856e-02d718a9ec51",
             "sourceColumn": "Linha",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "Estudante_Cartao",
@@ -2080,15 +2079,16 @@
             "source": {
               "expression": [
                 "let",
-                "    Fonte = Table.Combine({#\"2021\", #\"2020\", #\"2019\"}),",
+                "    Fonte = Table.Combine({#\"2022\",#\"2021\", #\"2020\", #\"2019\"}),",
                 "    #\"Colunas Mescladas\" = Table.CombineColumns(Table.TransformColumnTypes(Fonte, {{\"Mes\", type text}, {\"Mês\", type text}}, \"pt-BR\"),{\"Mes\", \"Mês\"},Combiner.CombineTextByDelimiter(\"\", QuoteStyle.None),\"Mesclado\"),",
                 "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Colunas Mescladas\",{{\"Mesclado\", \"Mes\"}}),",
                 "    #\"Personalização Adicionada\" = Table.AddColumn(#\"Colunas Renomeadas\", \"Total Passageiros\", each [Estudante_Cartao]+[Estudante_BT]+[Vale_Transporte]+[Integracao_Plena]+[Integracao_Complementar]+[Gratuito_Cartao]+[Gratuito_BT]+[Inteira_Cartao]+[Inteira_Especie]+[Tarifa_Social]),",
                 "    #\"Personalização Adicionada1\" = Table.AddColumn(#\"Personalização Adicionada\", \"Passageiros por Viagem\", each [Total Passageiros]/[Qtd_Viagens]),",
                 "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Personalização Adicionada1\",{{\"Total Passageiros\", Int64.Type}, {\"Passageiros por Viagem\", Int64.Type}, {\"Mes\", type date}}),",
-                "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado\",\" - URB\",\"\",Replacer.ReplaceText,{\"Empresa\"})",
+                "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado\",\" - URB\",\"\",Replacer.ReplaceText,{\"Empresa\"}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Valor Substituído\",{{\"Linha\", type text}})",
                 "in",
-                "    #\"Valor Substituído\""
+                "    #\"Tipo Alterado1\""
               ],
               "type": "m"
             }
@@ -2297,6 +2297,452 @@
             "mode": "import",
             "source": {
               "expression": "Calendar(Date(Year(MIN('Total'[Mes])), 1, 1), Date(Year(MAX('Total'[Mes])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "2022",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Mes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "9ffe4f0f-97cb-4978-b73f-d143d0400822",
+            "sourceColumn": "Mes",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Hierarquia de datas",
+                  "table": "LocalDateTable_b860adaa-a6e5-4025-84dd-30cb20e99d6e"
+                },
+                "isDefault": true,
+                "relationship": "ca863d81-0790-4d21-968d-88d0068cb99a"
+              }
+            ]
+          },
+          {
+            "name": "Empresa",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3071cebb-a68e-4e8a-a44c-cdd02227781a",
+            "sourceColumn": "Empresa",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Linha",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1e5df599-b93b-4032-86f3-2a2c218379d4",
+            "sourceColumn": "Linha",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Estudante_Cartao",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "db5fb757-7063-436e-9fab-3c39330459eb",
+            "sourceColumn": "Estudante_Cartao",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Estudante_BT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c06377a0-3bf3-4928-a09b-5b5facac6a01",
+            "sourceColumn": "Estudante_BT",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Vale_Transporte",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "72fe85af-d49a-4528-9faa-f5cb00f69e88",
+            "sourceColumn": "Vale_Transporte",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Integracao_Plena",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fa80069e-a538-4e54-8ef9-93d79bd6c07f",
+            "sourceColumn": "Integracao_Plena",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Integracao_Complementar",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5b0f678e-0822-499e-9f86-d5c0a3dd8bb9",
+            "sourceColumn": "Integracao_Complementar",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Gratuito_Cartao",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6866509d-9cc7-4f84-8579-8c91854ffc28",
+            "sourceColumn": "Gratuito_Cartao",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Gratuito_BT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "36bbdae0-6048-4c6a-9fe7-c168effaabb6",
+            "sourceColumn": "Gratuito_BT",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Inteira_Cartao",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "263fc601-6a29-4e58-aecd-1fde5f8b6eeb",
+            "sourceColumn": "Inteira_Cartao",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Inteira_Especie",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ca7b32d3-1885-45a1-9927-4352e83ace8b",
+            "sourceColumn": "Inteira_Especie",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Tarifa_Social",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "70ba5fd1-dbc0-414d-a9d4-a3c004b4711d",
+            "sourceColumn": "Tarifa_Social",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Qtd_Viagens",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "68bc6b2d-a5f1-47f4-b612-58c12f63eb05",
+            "sourceColumn": "Qtd_Viagens",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "26f1499c-153e-4cd6-a3b6-57669c5dc494",
+        "partitions": [
+          {
+            "name": "2022",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Users\\Aan\\Documents\\power Bi\\Linhas de Onibus Natal\\01-dados-be-2022-analitico.csv\"),[Delimiter=\",\", Columns=14, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Mes\", Int64.Type}, {\"Empresa\", type text}, {\"Linha\", Int64.Type}, {\"Estudante_Cartao\", Int64.Type}, {\"Estudante_BT\", Int64.Type}, {\"Vale_Transporte\", Int64.Type}, {\"Integracao_Plena\", Int64.Type}, {\"Integracao_Complementar\", Int64.Type}, {\"Gratuito_Cartao\", Int64.Type}, {\"Gratuito_BT\", Int64.Type}, {\"Inteira_Cartao\", Int64.Type}, {\"Inteira_Especie\", Int64.Type}, {\"Tarifa_Social\", Int64.Type}, {\"Qtd_Viagens\", Int64.Type}}),",
+                "    #\"Sufixo Adicionado\" = Table.TransformColumns(#\"Tipo Alterado\", {{\"Mes\", each Text.From(_, \"pt-BR\") & \"/2022\", type text}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Sufixo Adicionado\",{{\"Mes\", type date}})",
+                "in",
+                "    #\"Tipo Alterado1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_b860adaa-a6e5-4025-84dd-30cb20e99d6e",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "94a307c8-a208-4089-883a-e5f693390546",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "9479e2e8-94bd-4e52-abb1-51d5d2947276",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "df4ede8a-8d8a-4e40-a030-17a8fcd4c462",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "7bc1ee32-5c93-4949-a69c-c571b71f7a2b",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "8dd9487d-c240-411c-b9ac-2cfe80c2be1a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "5a2bd882-5a27-4008-a498-f9f14b27002e",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Dia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "1cf0f54f-8f7e-4000-8d6c-3908008d95ac",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Ano",
+                "column": "Ano",
+                "lineageTag": "7732e30f-d136-4097-88b9-0ddb8043262f",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "a3e5110f-895e-4c2c-b3e8-0bfa6aa6399f",
+                "ordinal": 1
+              },
+              {
+                "name": "Mês",
+                "column": "Mês",
+                "lineageTag": "c3e6fe87-6eb2-406b-87de-c27a55813690",
+                "ordinal": 2
+              },
+              {
+                "name": "Dia",
+                "column": "Dia",
+                "lineageTag": "61804f1c-fd5b-4bd0-af4b-98b52675847a",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "1851b857-4870-4f69-a526-3d1b1f78dddc"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "cbb6ce4d-e3e5-42bc-b9de-83bf9024801e",
+        "partitions": [
+          {
+            "name": "LocalDateTable_b860adaa-a6e5-4025-84dd-30cb20e99d6e",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('2022'[Mes])), 1, 1), Date(Year(MAX('2022'[Mes])), 12, 31))",
               "type": "calculated"
             }
           }
