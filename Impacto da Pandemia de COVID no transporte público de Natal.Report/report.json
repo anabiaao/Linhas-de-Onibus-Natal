@@ -1,0 +1,207 @@
+{
+  "config": "{\"version\":\"5.42\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY21SU11\",\"version\":\"5.28\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY21SU11",
+            "path": "BaseThemes/CY21SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Passageiros e linhas",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3e2e178f1a0880736430\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1091.52,\"y\":93.60000000000001,\"z\":3000,\"width\":99.36,\"height\":92.16}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano1\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano1\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 92.16,
+          "width": 99.36,
+          "x": 1091.52,
+          "y": 93.60,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"58800ae086a02b2c7414\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":12.96,\"z\":1000,\"width\":558.72,\"height\":308.16}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Mês\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.Total passageiros\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total passageiros\"},\"Name\":\"Medidas.Total passageiros\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 308.16,
+          "width": 558.72,
+          "x": 0.00,
+          "y": 12.96,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"64eaf77d43394e3e8752\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1091.52,\"y\":185.76000000000002,\"z\":4000,\"width\":145.44,\"height\":152.64000000000001}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Total.Empresa\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Empresa\"},\"Name\":\"Total.Empresa\"}]},\"syncGroup\":{\"groupName\":\"Empresa\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 152.64,
+          "width": 145.44,
+          "x": 1091.52,
+          "y": 185.76,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"77ac08002c10d3557969\",\"layouts\":[{\"id\":0,\"position\":{\"x\":593.28,\"y\":12.96,\"z\":6002,\"width\":479.52000000000004,\"height\":309.6,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Mês\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.Media de Passagiros por Viagem\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"NativeReferenceName\":\"Mes Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Mês\",\"NativeReferenceName\":\"Mes Mês\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Media de Passagiros por Viagem\"},\"Name\":\"Medidas.Media de Passagiros por Viagem\",\"NativeReferenceName\":\"Media de Passagiros por Viagem\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 309.60,
+          "width": 479.52,
+          "x": 593.28,
+          "y": 12.96,
+          "z": 6002.00
+        },
+        {
+          "config": "{\"name\":\"8e7a49b4d2840ec03bb8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":593.28,\"y\":360,\"z\":6001,\"width\":309.6,\"height\":342.72,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Total.Empresa\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Total.Total Passageiros)\"}],\"Series\":[{\"queryRef\":\"Total.Empresa\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Empresa\"},\"Name\":\"Total.Empresa\",\"NativeReferenceName\":\"Contagem de Empresa\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Total Passageiros\"}},\"Function\":0},\"Name\":\"Sum(Total.Total Passageiros)\",\"NativeReferenceName\":\"Total Passageiros\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Total Passageiros\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 342.72,
+          "width": 309.60,
+          "x": 593.28,
+          "y": 360.00,
+          "z": 6001.00
+        },
+        {
+          "config": "{\"name\":\"c53182635e08b1a35594\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":360,\"z\":2000,\"width\":558.72,\"height\":342.72}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Medidas.Total linhas\"}],\"Category\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Mês\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total linhas\"},\"Name\":\"Medidas.Total linhas\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"NativeReferenceName\":\"Mes Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Mês\",\"NativeReferenceName\":\"Mes Mês\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 342.72,
+          "width": 558.72,
+          "x": 0.00,
+          "y": 360.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"e15e60262e1ec0084ac9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":912.96,\"y\":360,\"z\":6000,\"width\":342.72,\"height\":342.72}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Group\":[{\"queryRef\":\"Total.Empresa\",\"active\":true}],\"Values\":[{\"queryRef\":\"Medidas.Total linhas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Empresa\"},\"Name\":\"Total.Empresa\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total linhas\"},\"Name\":\"Medidas.Total linhas\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 342.72,
+          "width": 342.72,
+          "x": 912.96,
+          "y": 360.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"ee6961ad6380585e929a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1091.52,\"y\":20.16,\"z\":5000,\"width\":164.16,\"height\":73.44}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Total.Linha\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Linha\"},\"Name\":\"Total.Linha\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 73.44,
+          "width": 164.16,
+          "x": 1091.52,
+          "y": 20.16,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Tarifas",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiond818a86c042b117000a0",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2771d8422469c0308a38\",\"layouts\":[{\"id\":0,\"position\":{\"x\":639.5209580838324,\"y\":188.26347305389223,\"z\":7000,\"width\":492.934131736527,\"height\":475.68862275449106}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Total.Linha\"},{\"queryRef\":\"Medidas.InteiraP\"},{\"queryRef\":\"Medidas.EstudanteP\"},{\"queryRef\":\"Medidas.Relação inteira gratuidade\"},{\"queryRef\":\"Medidas.IntegraçãoP\"},{\"queryRef\":\"Medidas.Total passageiros\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Linha\"},\"Name\":\"Total.Linha\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"GratuidadeP\"},\"Name\":\"Medidas.Relação inteira gratuidade\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"InteiraP\"},\"Name\":\"Medidas.InteiraP\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"EstudanteP\"},\"Name\":\"Medidas.EstudanteP\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"IntegraçãoP\"},\"Name\":\"Medidas.IntegraçãoP\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total passageiros\"},\"Name\":\"Medidas.Total passageiros\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"GratuidadeP\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 475.69,
+          "width": 492.93,
+          "x": 639.52,
+          "y": 188.26,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"6c01f1cdbb2e8118018c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":498.68263473053895,\"y\":0,\"z\":1000,\"width\":250.05988023952096,\"height\":188.26347305389223}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Category\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Trimestre\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"}],\"Y\":[{\"queryRef\":\"Medidas.Gratuidade\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Gratuidade\"},\"Name\":\"Medidas.Gratuidade\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 188.26,
+          "width": 250.06,
+          "x": 498.68,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"834db3509cd003532ecc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1131.8400000000001,\"y\":188.64000000000001,\"z\":6000,\"width\":138.24,\"height\":70.56}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Total.Linha\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Linha\"},\"Name\":\"Total.Linha\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 70.56,
+          "width": 138.24,
+          "x": 1131.84,
+          "y": 188.64,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"b71f8ee010700c200190\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.05988023952096,\"y\":0,\"z\":0,\"width\":244.311377245509,\"height\":176.76646706586828}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Category\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Trimestre\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"}],\"Y\":[{\"queryRef\":\"Medidas.Total Estudantes\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Estudante\"},\"Name\":\"Medidas.Total Estudantes\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 176.77,
+          "width": 244.31,
+          "x": 10.06,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c8a2af3a073309066cd3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":748.7425149700599,\"y\":0,\"z\":3000,\"width\":262.99401197604794,\"height\":176.76646706586828}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Y\":[{\"queryRef\":\"Medidas.Inteira\"}],\"Category\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Trimestre\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Inteira\"},\"Name\":\"Medidas.Inteira\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 176.77,
+          "width": 262.99,
+          "x": 748.74,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"d170fc957e0523de4cde\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1011.7365269461078,\"y\":0,\"z\":4000,\"width\":240,\"height\":176.76646706586828}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Y\":[{\"queryRef\":\"Medidas.Social\"}],\"Category\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Trimestre\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Social\"},\"Name\":\"Medidas.Social\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 176.77,
+          "width": 240.00,
+          "x": 1011.74,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"dae7afe330b0ac18e5d5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1131.8400000000001,\"y\":293.76,\"z\":8000,\"width\":92.16,\"height\":102.24000000000001}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 102.24,
+          "width": 92.16,
+          "x": 1131.84,
+          "y": 293.76,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"dd624106493105b2a6a4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":254.37125748502996,\"y\":0,\"z\":2000,\"width\":244.311377245509,\"height\":188.26347305389223}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Category\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Trimestre\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"}],\"Y\":[{\"queryRef\":\"Medidas.Integração\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Integração\"},\"Name\":\"Medidas.Integração\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 188.26,
+          "width": 244.31,
+          "x": 254.37,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"e071fb2003b937c8990d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1124.64,\"y\":396,\"z\":8001,\"width\":145.44,\"height\":152.64000000000001}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Total.Empresa\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Empresa\"},\"Name\":\"Total.Empresa\"}]},\"syncGroup\":{\"groupName\":\"Empresa\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 152.64,
+          "width": 145.44,
+          "x": 1124.64,
+          "y": 396.00,
+          "z": 8001.00
+        },
+        {
+          "config": "{\"name\":\"e9e2ec4064b9a9d51744\",\"layouts\":[{\"id\":0,\"position\":{\"x\":30.179640718562876,\"y\":209.82035928143713,\"z\":5000,\"width\":593.5329341317365,\"height\":441.1976047904192}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"}],\"Y\":[{\"queryRef\":\"Medidas.Inteira\"},{\"queryRef\":\"Medidas.Total Estudantes\"},{\"queryRef\":\"Medidas.Gratuidade\"},{\"queryRef\":\"Medidas.Integração\"},{\"queryRef\":\"Medidas.Social\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Name\":\"Variation\",\"Property\":\"Mes\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Total.Mes.Variation.Hierarquia de datas.Dia\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Inteira\"},\"Name\":\"Medidas.Inteira\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Estudante\"},\"Name\":\"Medidas.Total Estudantes\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Gratuidade\"},\"Name\":\"Medidas.Gratuidade\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Integração\"},\"Name\":\"Medidas.Integração\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Social\"},\"Name\":\"Medidas.Social\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"totals\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 441.20,
+          "width": 593.53,
+          "x": 30.18,
+          "y": 209.82,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Impacto da Pandemia de COVID no transporte público de Natal"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "402e9cf7-3c1b-4280-b8e8-72a124be38b0"
+  }
+}
